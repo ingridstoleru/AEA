@@ -1,0 +1,7 @@
+What I have change to the code strictly for performance are the following:
+- range -> xrange (Returns a generator that brings numbers in memory only on demand)
+- Load the modules as needed - lazy way (May reduce peaks of memory usage)
+- Multiple assignments
+
+What was already implemented:
+- List comprehension as an alternative more optimal to loops
