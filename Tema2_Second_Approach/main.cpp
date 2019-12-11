@@ -13,7 +13,7 @@
 #define eps 0.0000000001
 #define all(x) x.begin(),x.end()
 #define tot(x) x+1,x+n+1
-#define MAXL  50
+#define MAXL  64
 using namespace std;
 
 const int dx[] = {0, 1, 0, -1};
@@ -35,6 +35,7 @@ ll n, m, l, k, i, x;
 string string_mask;
 ll sum, sol, sol_mask, mask, mm, j, pos, offers_mask, sol_offers_mask;
 offer offers[MAXL];
+int padding[16];
 relation relations[MAXL];
     
 bool ok;
