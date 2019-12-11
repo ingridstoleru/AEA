@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <string>
 
 #define pb push_back
 #define mp make_pair
@@ -37,9 +38,17 @@ ll sum, sol, sol_mask, mask, mm, j, pos, offers_mask, sol_offers_mask;
 offer offers[MAXL];
 int padding[16];
 relation relations[MAXL];
-    
+
 bool ok;
-inline void read() {
+inline string to_string(int val) {
+
+    stringstream ss;
+    ss << val;
+    return ss.str();
+}
+inline void read(int test) {
+    string file = "data" + to_string(test) + ".in";
+    freopen(file.c_str(), "r", stdin);
     scanf("%lld%lld%lld", &n, &m, &l); // citim numarul de bidders, de items si numarul de oferte
 
     for(i = 1; i <= l; i++) {
@@ -140,17 +149,23 @@ inline void solve() {
     }
 
     //reverse(all(string_mask));
-    printf("maximum sum: %lld assignment mask: %s", sol, string_mask.c_str());
+    printf("maximum sum: %lld assignment mask: %s\n", sol, string_mask.c_str());
 }
 int main() {
     //cin.sync_with_stdio(0);
     // cout.sync_with_stdio(0);
-    freopen("data.in", "r", stdin);
-    read();
+    int T = 1;
 
-    if(check() == -1)
-        return -1;
+    for(int i = 0; i < T; i++) {
+        clock_t tStart = clock();
+        read(i);
+        if(check() == -1) {
+            return -1;
+        }
 
-    solve();
+        solve();
+        printf("Time taken: %.6fs\n", (double)(clock() - tStart) / CLOCKS_PER_SEC);
+    }
+
     return 0;
 }
