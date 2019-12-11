@@ -13,6 +13,7 @@
 #define eps 0.0000000001
 #define all(x) x.begin(),x.end()
 #define tot(x) x+1,x+n+1
+#define MAXL  50
 using namespace std;
 
 const int dx[] = {0, 1, 0, -1};
@@ -33,14 +34,12 @@ struct relation {
 ll n, m, l, k, i, x;
 string string_mask;
 ll sum, sol, sol_mask, mask, mm, j, pos, offers_mask, sol_offers_mask;
+offer offers[MAXL];
+relation relations[MAXL];
+    
 bool ok;
-int main() {
-    //cin.sync_with_stdio(0);
-    // cout.sync_with_stdio(0);
-    freopen("data.in", "r", stdin);
+inline void read() {
     scanf("%lld%lld%lld", &n, &m, &l); // citim numarul de bidders, de items si numarul de oferte
-    offer offers[l];
-    relation relations[l];
 
     for(i = 1; i <= l; i++) {
         //citim oferta i
@@ -61,11 +60,12 @@ int main() {
     //citim relatiile
     for(i = 1; i <= l; i++)
         scanf("%lld%lld", &relations[i].bidOfferId, &relations[i].bidderId);
-
+}
+inline int check() {
     for(i = 1; i <= l; i++) {
         if(offers[i].mask == 0 && offers[i].price > 0) {
-            cout << "Nu este respectata normalizarea\n";
-            return 0;
+            cerr << "Nu este respectata normalizarea\n";
+            return -1;
         }
 
         for(j = i + 1; j <= l; j++) {
@@ -75,19 +75,22 @@ int main() {
             if(relations[i].bidderId == relations[j].bidderId) {
                 if((offers[bidOffer1].mask & offers[bidOffer2].mask) == offers[bidOffer1].mask) // primul inclus in al doilea
                     if(offers[bidOffer1].price > offers[bidOffer2].price) {
-                        cout << "Nu este respectata monotonia\n";
-                        return 0;
+                        cerr << "Nu este respectata monotonia\n";
+                        return -1;
                     }
 
                 if((offers[bidOffer1].mask & offers[bidOffer2].mask) == offers[bidOffer2].mask) // al doilea inclus in primul
                     if(offers[bidOffer2].price > offers[bidOffer1].price) {
-                        cout << "Nu este respectata monotonia\n";
-                        return 0;
+                        cerr << "Nu este respectata monotonia\n";
+                        return -1;
                     }
             }
         }
     }
 
+    return 0;
+}
+inline void solve() {
     sol = 0;
     mm = (1ll << l);
 
@@ -109,7 +112,6 @@ int main() {
                 sum += offers[pos].price;
                 mask |= offers[pos].mask;
                 offers_mask |= (1ll << pos);
-
             }
 
             x >>= 1;
@@ -117,10 +119,8 @@ int main() {
         }
 
         if(sum > sol) {
-            //cout << "*" << i;
             sol = sum;
             sol_mask = mask;
-            //sol_offers_mask = offers_mask;
             sol_offers_mask = i;
         }
     }
@@ -140,5 +140,16 @@ int main() {
 
     //reverse(all(string_mask));
     printf("maximum sum: %lld assignment mask: %s", sol, string_mask.c_str());
+}
+int main() {
+    //cin.sync_with_stdio(0);
+    // cout.sync_with_stdio(0);
+    freopen("data.in", "r", stdin);
+    read();
+
+    if(check() == -1)
+        return -1;
+
+    solve();
     return 0;
 }
