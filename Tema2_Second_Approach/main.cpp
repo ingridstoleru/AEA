@@ -41,11 +41,20 @@ relation relations[MAXL];
 
 bool ok;
 inline string to_string(int val) {
-
     stringstream ss;
     ss << val;
     return ss.str();
 }
+inline void init() {
+    sol = 0;
+    sol_mask = 0;
+    sol_offers_mask = 0;
+    string_mask = "";
+    for(i = 1; i < MAXL; i++) {
+        offers[i].mask = 0;
+    }
+}
+
 inline void read(int test) {
     string file = "data" + to_string(test) + ".in";
     freopen(file.c_str(), "r", stdin);
@@ -154,17 +163,21 @@ inline void solve() {
 int main() {
     //cin.sync_with_stdio(0);
     // cout.sync_with_stdio(0);
-    int T = 1;
+    int T = 30;
 
     for(int i = 0; i < T; i++) {
+        init();
         clock_t tStart = clock();
         read(i);
+
         if(check() == -1) {
-            return -1;
+            printf("Time taken: %.6fs\n\n", (double)(clock() - tStart) / CLOCKS_PER_SEC);
+            continue;
+            //return -1;
         }
 
         solve();
-        printf("Time taken: %.6fs\n", (double)(clock() - tStart) / CLOCKS_PER_SEC);
+        printf("Time taken: %.6fs\n\n", (double)(clock() - tStart) / CLOCKS_PER_SEC);
     }
 
     return 0;
