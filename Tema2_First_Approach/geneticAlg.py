@@ -11,6 +11,8 @@
 import random
 import numpy
 import ga
+import time	
+import statistics	
 
 """ Aux data for algorithm """
 num_generations = 100
@@ -19,10 +21,11 @@ number_chromosomes = 20
 num_parents_mating = 4
 
 """ Input data """
-number_bidders = 4;
-number_objects = 5;
-number_bids = 12;
+number_bidders = 42;
+number_objects = 26;
+number_bids = 5;
 
+"""
 offers = [[1, [1, 2, 3, 4, 5], 173],
           [1, [1, 2, 4, 5], 173],
           [1, [1, 2, 5], 59],
@@ -35,7 +38,13 @@ offers = [[1, [1, 2, 3, 4, 5], 173],
           [4, [1, 4], 142],
           [4, [1, 4, 5], 223],
           [2, [3], 52]]; 
-      
+"""      
+
+offers = [[40, [10, 21, 2, 20], 20],
+[5, [10, 21, 2, 20], 20],
+[7, [10, 21, 2, 20], 20],
+[16, [26, 7, 24, 19, 9, 5, 25, 8, 11, 12, 18, 6, 16, 17, 14], 14],
+[18, [26, 7, 24, 19, 9, 5, 25, 8, 11, 12, 18, 6, 16, 17, 14], 14]];
 
 # Python program to illustrate the intersection 
 # of two lists in most simple way 
@@ -170,6 +179,24 @@ def gawd():
 
 	print("Best solution : ", new_population[best_match_idx[0][0], :])
 	print("Best solution fitness : ", fitness[best_match_idx[0][0]])
-	
+	return fitness[best_match_idx[0][0]]
+ 
 if __name__ == '__main__':
-	gawd()
+    times = []
+    fitnesses = []
+    for el in range(50):
+        start_time = time.time()
+        x = gawd()
+        print("--- %s seconds ---" % (time.time() - start_time))
+        times.append((time.time() - start_time))
+        fitnesses.append(x)
+
+    print(min(times))
+    print(max(times))
+    print(statistics.mean(times))
+
+    print(min(fitnesses))
+    print(max(fitnesses))
+    print(statistics.mean(fitnesses))
+    print(statistics.stdev(fitnesses))
+    print(fitnesses.count(max(fitnesses)))
