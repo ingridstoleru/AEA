@@ -1,0 +1,228 @@
+{
+  "data": [
+    [
+      [
+        1,
+        null,
+        0
+      ],
+      [
+        225,
+        0.9246251583099365,
+        {
+          "__enum__": "StatusType.SUCCESS"
+        },
+        {}
+      ]
+    ],
+    [
+      [
+        2,
+        null,
+        0
+      ],
+      [
+        225,
+        0.3115215301513672,
+        {
+          "__enum__": "StatusType.SUCCESS"
+        },
+        {}
+      ]
+    ],
+    [
+      [
+        3,
+        null,
+        0
+      ],
+      [
+        300,
+        2.497391939163208,
+        {
+          "__enum__": "StatusType.SUCCESS"
+        },
+        {}
+      ]
+    ],
+    [
+      [
+        4,
+        null,
+        0
+      ],
+      [
+        275,
+        0.2813839912414551,
+        {
+          "__enum__": "StatusType.SUCCESS"
+        },
+        {}
+      ]
+    ],
+    [
+      [
+        5,
+        null,
+        0
+      ],
+      [
+        225,
+        0.2620208263397217,
+        {
+          "__enum__": "StatusType.SUCCESS"
+        },
+        {}
+      ]
+    ],
+    [
+      [
+        6,
+        null,
+        0
+      ],
+      [
+        300,
+        0.2121880054473877,
+        {
+          "__enum__": "StatusType.SUCCESS"
+        },
+        {}
+      ]
+    ],
+    [
+      [
+        7,
+        null,
+        0
+      ],
+      [
+        225,
+        0.8685891628265381,
+        {
+          "__enum__": "StatusType.SUCCESS"
+        },
+        {}
+      ]
+    ],
+    [
+      [
+        8,
+        null,
+        0
+      ],
+      [
+        225,
+        0.2983894348144531,
+        {
+          "__enum__": "StatusType.SUCCESS"
+        },
+        {}
+      ]
+    ],
+    [
+      [
+        9,
+        null,
+        0
+      ],
+      [
+        225,
+        0.25235462188720703,
+        {
+          "__enum__": "StatusType.SUCCESS"
+        },
+        {}
+      ]
+    ],
+    [
+      [
+        10,
+        null,
+        0
+      ],
+      [
+        300,
+        0.20982694625854492,
+        {
+          "__enum__": "StatusType.SUCCESS"
+        },
+        {}
+      ]
+    ]
+  ],
+  "config_origins": {
+    "1": "Sobol",
+    "2": "Sobol",
+    "3": "Local Search",
+    "4": "Local Search",
+    "5": "Local Search",
+    "6": "Local Search",
+    "7": "Local Search",
+    "8": "Local Search",
+    "9": "Local Search",
+    "10": "Local Search"
+  },
+  "configs": {
+    "1": {
+      "mutation_prob": 0.5,
+      "num_generations": 150.0,
+      "num_parents_mating": 4,
+      "number_chromosomes": 55.0
+    },
+    "2": {
+      "mutation_prob": 0.7000000000000001,
+      "num_generations": 100.0,
+      "num_parents_mating": 4,
+      "number_chromosomes": 32.5
+    },
+    "3": {
+      "mutation_prob": 0.10003579656930656,
+      "num_generations": 249.9197985201728,
+      "num_parents_mating": 2,
+      "number_chromosomes": 99.98557755633763
+    },
+    "4": {
+      "mutation_prob": 0.7011616696567378,
+      "num_generations": 114.44597948640408,
+      "num_parents_mating": 4,
+      "number_chromosomes": 32.57796027671884
+    },
+    "5": {
+      "mutation_prob": 0.7002215452045609,
+      "num_generations": 97.8264753390813,
+      "num_parents_mating": 4,
+      "number_chromosomes": 32.41683743216635
+    },
+    "6": {
+      "mutation_prob": 0.6945458725618242,
+      "num_generations": 98.81160672862637,
+      "num_parents_mating": 4,
+      "number_chromosomes": 32.68156295034111
+    },
+    "7": {
+      "mutation_prob": 0.501414010462824,
+      "num_generations": 150.37523919353268,
+      "num_parents_mating": 4,
+      "number_chromosomes": 55.079915119874606
+    },
+    "8": {
+      "mutation_prob": 0.7026505886553974,
+      "num_generations": 100.14499739523077,
+      "num_parents_mating": 4,
+      "number_chromosomes": 32.448339073560746
+    },
+    "9": {
+      "mutation_prob": 0.7041862246681004,
+      "num_generations": 97.56144281940095,
+      "num_parents_mating": 4,
+      "number_chromosomes": 32.191705374739776
+    },
+    "10": {
+      "mutation_prob": 0.7026235648810633,
+      "num_generations": 94.97814708233358,
+      "num_parents_mating": 4,
+      "number_chromosomes": 32.25873324877739
+    }
+  }
+}

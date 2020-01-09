@@ -1,0 +1,2 @@
+{"cpu_time": 0, "total_cpu_time": null, "wallclock_time": 0.010454177856445312, "evaluations": 0, "cost": 2147483648, "incumbent": ["mutation_prob='0.5'", "num_generations='150.0'", "num_parents_mating='4'", "number_chromosomes='55.0'"], "origin": "Sobol"}
+{"cpu_time": 0.9246251583099365, "total_cpu_time": null, "wallclock_time": 0.9554343223571777, "evaluations": 1, "cost": 225, "incumbent": ["mutation_prob='0.5'", "num_generations='150.0'", "num_parents_mating='4'", "number_chromosomes='55.0'"], "origin": "Sobol"}

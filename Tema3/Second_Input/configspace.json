@@ -1,0 +1,41 @@
+{
+  "hyperparameters": [
+    {
+      "name": "mutation_prob",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 0.1,
+      "upper": 0.9,
+      "default": 0.5
+    },
+    {
+      "name": "num_generations",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 50.0,
+      "upper": 250.0,
+      "default": 100.0
+    },
+    {
+      "name": "num_parents_mating",
+      "type": "categorical",
+      "choices": [
+        2,
+        4
+      ],
+      "default": 4
+    },
+    {
+      "name": "number_chromosomes",
+      "type": "uniform_float",
+      "log": false,
+      "lower": 10.0,
+      "upper": 100.0,
+      "default": 20.0
+    }
+  ],
+  "conditions": [],
+  "forbiddens": [],
+  "python_module_version": "0.4.11",
+  "json_format_version": 0.1
+}
