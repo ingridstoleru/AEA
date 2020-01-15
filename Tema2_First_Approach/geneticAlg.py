@@ -199,7 +199,7 @@ def gawd():
 if __name__ == '__main__':
     times = []
     fitnesses = []
-    for el in range(50):
+    for el in range(1):
         start_time = time.time()
         x = gawd()
         print("--- %s seconds ---" % (time.time() - start_time))
