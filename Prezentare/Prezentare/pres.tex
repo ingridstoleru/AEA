@@ -295,14 +295,55 @@
 			\includegraphics[scale=0.6]{pipeline.PNG}
 		\end{figure}	
 	\end{frame}
-
-
+\section{Compararea performanelor}
+	\subsection{Cele 3 sisteme}
+	\begin{frame}{AUTO-SKLEARN vs AUTO-WEKA and HYPEROPT-SKLEARN}
+		\begin{itemize}
+			\item 100 000 bootstrap samples
+			\item 10 runs
+		\end{itemize}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.75]{tabel_cmp.png}
+		\end{figure}	
+		
+		
+	\end{frame}
+	\subsection{Toate cele 4 variante de AUTO-SKLEARN}
+	\begin{frame}{Toate cele 4 variante de AUTO-SKLEARN}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.6]{grafic_cmp.png}
+		\end{figure}	
+		\begin{itemize}
+			\item tot 140 dataseturi
+			\item comparate urilizand  Balanced test Error Rate 
+			\item "BER is the average of the proportion of wrong classifications in each class"  \footnote{http://research.ics.aalto.fi/events/eyechallenge2005/evaluation.shtml}
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+\section{Evaluarea imbunatatirilor propuse}
+	\subsection{}
+	\begin{frame}{Evaluarea imbunatatirilor propuse}
+		\begin{itemize}
+			\item 13 dataseturi
+			\item toate optimizarile au rulat 24 de ore
+			\item AUTO-SKLEARN a rulat 48 de ore
+		\end{itemize}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.75]{tabel_performante.png}
+		\end{figure}	
+		
+		
+	\end{frame}
+	
 	\begin{frame}{}
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.7]{multumesc.PNG}
 		\end{figure}	
 	\end{frame}
-
-
 \end{document}
